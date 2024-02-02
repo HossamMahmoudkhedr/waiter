@@ -66,7 +66,8 @@ const Packages = () => {
 			</Stack>
 			<Grid
 				container
-				spacing={2}
+				rowSpacing={2}
+				columnSpacing={{ xs: 0, lg: 2 }}
 				width="100%">
 				{packages.map((pack, i) => (
 					<Grid
