@@ -1,13 +1,85 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&display=swap');
+
+:root {
+	--very-light-gray: #98a2b3;
+	--light-gray: #ffffff80;
+	--gray: #475467;
+	--dark-gray: #1d2939;
+	--blue: #007aff;
+	--green: #cff85b;
+	--purple: #9747ff;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Alexandria', sans-serif !important;
+}
+
+ul li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+ul li a {
+	color: var(--gray);
+}
+
+nav ul li a.active {
+	color: var(--blue);
+}
+
+.container {
+	margin: 0px auto;
+}
+
+.set-padding {
+	padding: 7.5rem 0;
+}
+
+@media (max-width: 768px) {
+	.set-padding {
+		padding: 5rem 0;
+	}
+}
+@media (max-width: 992px) {
+	.set-padding {
+		padding: 5rem 0;
+	}
+}
+@media (max-width: 576px) {
+	.container {
+		max-width: 335px;
+	}
+}
+
+@media (min-width: 576px) {
+	.container {
+		max-width: 540px;
+	}
+}
+@media (min-width: 768px) {
+	.container {
+		max-width: 720px;
+	}
+}
+@media (min-width: 992px) {
+	.container {
+		max-width: 960px;
+	}
+}
+@media (min-width: 1200px) {
+	.container {
+		max-width: 1140px;
+	}
+}
+@media (min-width: 1400px) {
+	.container {
+		max-width: 1320px;
+	}
 }
