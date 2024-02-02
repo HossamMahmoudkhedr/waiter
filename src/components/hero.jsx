@@ -137,16 +137,15 @@ const Hero = () => {
 				<Box
 					sx={{
 						position: 'absolute',
-						left: '48%',
+						left: '50%',
 						top: '50%',
 						transform: 'translate(-50%,-50%)',
 						backgroundImage: {
-							xs: `url(${require('../assets/images/phone-image3.png')})`,
-							md: `url(${require('../assets/images/phone-image2.png')})`,
+							xs: `url(${require('../assets/images/phone-image2.png')})`,
 							lg: `url(${require('../assets/images/phone-image.png')})`,
 						},
 						backgroundRepeat: 'no-repeat',
-						backgroundSize: 'contain',
+						backgroundSize: { xs: 'cover', md: 'contain' },
 						backgroundPosition: 'center',
 						width: '100%',
 						height: '100%',
@@ -173,7 +172,7 @@ const Hero = () => {
 						backgroundSize: { xs: 'cover', lg: 'contain' },
 						backgroundPosition: { xs: 'unset', lg: 'center' },
 						backgroundPositionX: { xs: '97%', md: '18%' },
-						backgroundPositionY: { xs: '-110px', md: 'unset' },
+						backgroundPositionY: { xs: '0px', md: '8px' },
 					}}></Box>
 			</Box>
 		</Stack>
