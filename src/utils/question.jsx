@@ -4,7 +4,7 @@ import { icons } from './icons';
 
 const Question = ({ question, answer, opened }) => {
 	return (
-		<Stack sx={{ gap: opened ? '1rem' : '0' }}>
+		<Stack>
 			<Stack
 				direction="row"
 				sx={{ justifyContent: 'space-between' }}>
@@ -28,7 +28,8 @@ const Question = ({ question, answer, opened }) => {
 					fontWeight: '500',
 					color: 'var(--gray)',
 					width: '70%',
-					height: opened ? { xs: '230px', md: '110px', lg: '80px' } : '0px',
+					maxHeight: opened ? '200px' : '0px',
+					height: opened ? 'auto' : 'unset',
 					overflow: 'hidden',
 					transition: 'all 0.3s ease-out',
 				}}>

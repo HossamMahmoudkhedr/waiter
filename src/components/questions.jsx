@@ -58,7 +58,7 @@ const Questions = () => {
 										? '1px solid var(--very-light-gray)'
 										: 'unset'
 								}`,
-								padding: `${i !== 0 ? '1.5rem 0' : '0 0 1.5rem 0'}`,
+								padding: `${i !== 0 ? '1.5rem 0 1.5rem 0' : '0 0 1.5rem 0'}`,
 								transition: 'all 0.3s ease-out',
 								cursor: 'pointer',
 							}}>
