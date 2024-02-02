@@ -16,6 +16,7 @@ import { ReactComponent as Plus } from '../assets/icons/plus.svg';
 import { ReactComponent as Minus } from '../assets/icons/minus.svg';
 import { ReactComponent as Menu } from '../assets/icons/menu.svg';
 import { ReactComponent as Close } from '../assets/icons/close.svg';
+import { ReactComponent as ArrowUp } from '../assets/icons/arrow-up.svg';
 
 export const icons = {
 	star: <Star />,
@@ -36,4 +37,5 @@ export const icons = {
 	minus: <Minus />,
 	menu: <Menu />,
 	close: <Close />,
+	up: <ArrowUp />,
 };

@@ -40,6 +40,12 @@
 div.open {
 	height: 180px;
 }
+
+@media (min-width: 625px) and (max-width: 900px) {
+	.MuiBox-root.css-162rqx5 {
+		background-size: contain !important;
+	}
+}
 @media (max-width: 768px) {
 	div.open {
 		height: 300px;
