@@ -6,6 +6,9 @@ const circleStyles = `
 	border-radius: 50%;
 	position: absolute;
 	filter: blur(250px);
+	@media (max-width:992px){
+		filter:blur(200px);
+	}
 `;
 
 const StyledMain = styled.div`
@@ -33,6 +36,9 @@ const StyledGreenCircle = styled.div`
 	background: #cff85b;
 	top: ${(props) => props.gtop};
 	left: ${(props) => props.gleft};
+	@media (max-width: 768px) {
+		left: 25%;
+	}
 `;
 
 const StyledBlueCircle = styled.div`
@@ -42,6 +48,10 @@ const StyledBlueCircle = styled.div`
 	background: #3efbe0;
 	top: ${(props) => props.ytop};
 	right: ${(props) => props.yright};
+
+	@media (max-width: 768px) {
+		top: -12%;
+	}
 `;
 const Gradient = ({ gtop, gleft, ytop, yright, opacity }) => {
 	return (
