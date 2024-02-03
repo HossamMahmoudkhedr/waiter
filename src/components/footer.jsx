@@ -8,9 +8,10 @@ const Footer = () => {
 			component="footer"
 			className="container"
 			sx={{ alignItems: 'center', padding: '2.5rem 0', gap: '1.5rem' }}>
-			<Box>
+			<Box width="112px">
 				<img
-					src={require('../assets/images/footer-logo.png')}
+					width={'100%'}
+					src={require('../assets/images/logo11.png')}
 					alt="Waiter"
 				/>
 			</Box>

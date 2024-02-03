@@ -53,7 +53,7 @@ const Packages = () => {
 								height: '24px',
 								borderRadius: '50%',
 								backgroundColor: `${
-									selectedType === 1 ? 'var(--black)' : 'var(--blue)'
+									selectedType === 0 ? 'var(--black)' : 'var(--blue)'
 								}`,
 								display: 'block',
 								transform: switchPos,
