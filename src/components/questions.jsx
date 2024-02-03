@@ -21,7 +21,9 @@ const Questions = () => {
 		});
 	};
 	return (
-		<Box className="container">
+		<Box
+			id="questions"
+			className="container">
 			<Stack
 				className="set-padding"
 				direction={{ xs: 'column', lg: 'row' }}

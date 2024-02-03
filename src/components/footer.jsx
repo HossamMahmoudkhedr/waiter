@@ -25,7 +25,7 @@ const Footer = () => {
 					<NavLink to="/order">طريقة الطلب</NavLink>
 				</li>
 				<li>
-					<a href="#">الأسعار</a>
+					<a href="#prices">الأسعار</a>
 				</li>
 				<li>
 					<NavLink to="/solutions">الحلول</NavLink>

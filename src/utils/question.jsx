@@ -28,7 +28,7 @@ const Question = ({ question, answer, opened }) => {
 					fontWeight: '500',
 					color: 'var(--gray)',
 					width: '70%',
-					maxHeight: opened ? '200px' : '0px',
+					maxHeight: opened ? '220px' : '0px',
 					height: opened ? 'auto' : 'unset',
 					overflow: 'hidden',
 					transition: 'all 0.3s ease-out',

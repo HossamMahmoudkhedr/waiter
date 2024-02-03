@@ -39,7 +39,7 @@ const Hero = () => {
 						sx={{
 							fontSize: { xs: '2rem', md: '3rem', lg: '3.5rem' },
 							fontWeight: '500',
-							lineHeight: { xs: '40px', md: '55px', lg: '72px' },
+							lineHeight: { xs: '40px', md: '70px', lg: '72px' },
 						}}>
 						أيًا كان نشاطك، مطعم ، كوفي ، سوبر ماركت تطبيقك جاهز خلال 48 ساعة !
 					</Typography>

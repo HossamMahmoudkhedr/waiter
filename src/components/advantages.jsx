@@ -7,7 +7,7 @@ import { advantages } from '../data/advantagesData';
 
 const Advantages = () => {
 	return (
-		<Box>
+		<Box id="advantages">
 			<Box className="container set-padding">
 				<Header
 					title={'المميزات'}

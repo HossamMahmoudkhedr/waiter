@@ -17,6 +17,10 @@
 	font-family: 'Alexandria', sans-serif !important;
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 ul li {
 	list-style: none;
 }

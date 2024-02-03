@@ -2,7 +2,7 @@ import { Box, Typography } from '@mui/material';
 import React from 'react';
 import { icons } from './icons';
 
-const Heading = ({ text, left, right }) => {
+const Heading = ({ text, left, right, fs, lh }) => {
 	return (
 		<Box>
 			<Box
@@ -26,9 +26,13 @@ const Heading = ({ text, left, right }) => {
 				<Typography
 					variant="h3"
 					sx={{
-						fontSize: { xs: '1.75rem', lg: '3rem' },
+						fontSize: {
+							xs: fs ? `calc(${fs} - 1rem)` : '1.75rem',
+							md: fs || '2.25rem',
+							lg: '3rem',
+						},
 						fontWeight: '500',
-						lineHeight: '56px',
+						lineHeight: { xs: '42px', md: lh || '42px', lg: '56px' },
 					}}>
 					{text}
 				</Typography>
@@ -39,7 +43,11 @@ const Heading = ({ text, left, right }) => {
 						sx={{
 							display: { xs: 'none', md: 'block' },
 							position: 'absolute',
-							right: '-58px',
+							left: { md: text === 'أبرز الأسئلة الشائعة' ? '-70px' : 'unset' },
+							right: {
+								md: text !== 'أبرز الأسئلة الشائعة' ? '-58px' : 'unset',
+								lg: '-58px',
+							},
 							top: '-74px',
 						}}>
 						{icons.star}

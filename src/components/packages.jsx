@@ -19,6 +19,7 @@ const Packages = () => {
 	};
 	return (
 		<Stack
+			id="prices"
 			className="container set-padding"
 			sx={{ gap: '2.25rem' }}>
 			<Header

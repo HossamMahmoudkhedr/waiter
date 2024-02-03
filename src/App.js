@@ -7,6 +7,8 @@ import {
 import './App.css';
 import RootLayout from './pages/rootLayout';
 import Home from './components/home';
+import Solutions from './components/solutions';
+import Order from './components/order';
 
 const router = createBrowserRouter(
 	createRoutesFromElements(
@@ -16,6 +18,14 @@ const router = createBrowserRouter(
 			<Route
 				index
 				element={<Home />}
+			/>
+			<Route
+				path="/solutions"
+				element={<Solutions />}
+			/>
+			<Route
+				path="/order"
+				element={<Order />}
 			/>
 		</Route>
 	)

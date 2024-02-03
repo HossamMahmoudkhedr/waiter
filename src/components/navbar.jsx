@@ -1,6 +1,6 @@
 import { Box, Stack } from '@mui/material';
 import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import CustomButton from '../utils/customButton';
 import styled from 'styled-components';
 import { icons } from '../utils/icons';
@@ -30,6 +30,9 @@ const Navbar = () => {
 	const handleMenu = () => {
 		setOpened(!opened);
 	};
+	const handleNavClick = () => {
+		setOpened(false);
+	};
 	return (
 		<Box className="container">
 			<Stack
@@ -49,10 +52,12 @@ const Navbar = () => {
 						position: opened ? 'fixed' : 'unset',
 						zIndex: { xs: '9', lg: 'unset' },
 					}}>
-					<img
-						src={require('../assets/images/logo.png')}
-						alt="WAITER"
-					/>
+					<Link to={'/'}>
+						<img
+							src={require('../assets/images/logo.png')}
+							alt="WAITER"
+						/>
+					</Link>
 				</Box>
 				<Stack
 					direction={{ xs: 'column', lg: 'row' }}
@@ -80,39 +85,51 @@ const Navbar = () => {
 							border: { xs: 'unset', lg: '1px solid white' },
 						}}>
 						<StyledLI>
-							<NavLink to="/">الرئيسية</NavLink>
+							<NavLink
+								onClick={handleNavClick}
+								to="/">
+								الرئيسية
+							</NavLink>
 						</StyledLI>
 						<StyledLI>
-							<NavLink to="solutions">الحلول</NavLink>
+							<NavLink
+								onClick={handleNavClick}
+								to="/solutions">
+								الحلول
+							</NavLink>
 						</StyledLI>
 						<StyledLI>
-							<a href="#">الاسعار</a>
+							<a href="#prices">الاسعار</a>
 						</StyledLI>
 						<StyledLI>
-							<a href="#">المميزات</a>
+							<a href="#advantages">المميزات</a>
 						</StyledLI>
 						<StyledLI>
-							<NavLink to="/order">طريقة الطلب</NavLink>
+							<NavLink
+								onClick={handleNavClick}
+								to="/order">
+								طريقة الطلب
+							</NavLink>
 						</StyledLI>
 						<StyledLI className="last">
-							<a href="#">الأسئلة الشائعة</a>
+							<a href="#questions">الأسئلة الشائعة</a>
 						</StyledLI>
 					</Stack>
 					<Stack
 						direction={{ xs: 'column', lg: 'row' }}
-						sx={{ gap: '1rem' }}>
+						sx={{ gap: '1rem', alignItems: { xs: 'unset', lg: 'center' } }}>
 						<CustomButton
 							text="حساب جديد"
 							textcolor="var(--dark-gray)"
 							bgcolor="transparent"
-							paddingsize="0.65rem 1rem"
+							paddingsize="0.625rem 1rem"
 							fs="14px"
 						/>
 						<CustomButton
 							text="تسجيل الدخول"
 							textcolor="white"
 							bgcolor="var(--blue)"
-							paddingsize="0.65rem 1rem"
+							paddingsize="0.625rem 1rem"
 							fs="14px"
 						/>
 					</Stack>

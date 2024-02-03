@@ -37,7 +37,7 @@
 	right: 45%;
 } */
 
-div.open {
+/* div.open {
 	height: 180px;
 }
 
@@ -45,7 +45,7 @@ div.open {
 	.MuiBox-root.css-1v1cfkl {
 		background-size: contain !important;
 	}
-}
+} */
 @media (max-width: 768px) {
 	div.open {
 		height: 300px;
