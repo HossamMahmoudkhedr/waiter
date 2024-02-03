@@ -39,6 +39,7 @@ const SolHero = () => {
 							style={{ width: '100%' }}
 							src={require(`../assets/images/half-phone-lg.png`)}
 							alt=""
+							loading="lazy"
 						/>
 					</Box>
 					<Box

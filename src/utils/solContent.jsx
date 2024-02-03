@@ -55,6 +55,7 @@ const SolContent = ({
 							style={{ width: '100%' }}
 							src={require(`../assets/images/${img}`)}
 							alt=""
+							loading="lazy"
 						/>
 					</Box>
 				</Stack>
