@@ -51,10 +51,14 @@ const Navbar = () => {
 						top: { xs: '1rem', lg: 'unset' },
 						position: opened ? 'fixed' : 'unset',
 						zIndex: { xs: '9', lg: 'unset' },
+						width: '112px',
 					}}>
-					<Link to={'/'}>
+					<Link
+						to={'/'}
+						style={{ width: '100%' }}>
 						<img
-							src={require('../assets/images/logo.png')}
+							width={'100%'}
+							src={require('../assets/images/logo11.png')}
 							alt="WAITER"
 						/>
 					</Link>
@@ -99,10 +103,10 @@ const Navbar = () => {
 							</NavLink>
 						</StyledLI>
 						<StyledLI>
-							<a href="#prices">الاسعار</a>
+							<a href="/#prices">الاسعار</a>
 						</StyledLI>
 						<StyledLI>
-							<a href="#advantages">المميزات</a>
+							<a href="/#advantages">المميزات</a>
 						</StyledLI>
 						<StyledLI>
 							<NavLink

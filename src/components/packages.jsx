@@ -52,7 +52,9 @@ const Packages = () => {
 								width: '24px',
 								height: '24px',
 								borderRadius: '50%',
-								backgroundColor: 'var(--blue)',
+								backgroundColor: `${
+									selectedType === 1 ? 'var(--black)' : 'var(--blue)'
+								}`,
 								display: 'block',
 								transform: switchPos,
 								transition: 'all 0.2s ease-in',

@@ -1,6 +1,5 @@
-import { Box, Stack, Typography } from '@mui/material';
+import { Box, Stack } from '@mui/material';
 import React from 'react';
-import Header from './header';
 import TextContainer from './textContainer';
 
 const SolContent = ({
