@@ -75,7 +75,7 @@ const Navbar = () => {
 						zIndex: 2,
 						gap: { xs: '2rem', lg: 'unset' },
 						transition: { xs: 'all 0.3s ease-in', lg: 'unset' },
-						overflowY: 'scroll',
+						overflowY: { xs: 'scroll', lg: 'unset' },
 					}}>
 					<Stack
 						direction="row"
