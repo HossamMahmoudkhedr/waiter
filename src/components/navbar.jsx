@@ -69,7 +69,7 @@ const Navbar = () => {
 						padding: { xs: '3rem 1rem', lg: 'unset' },
 						backgroundColor: { xs: 'white', lg: 'unset' },
 						width: { xs: '100%', lg: '76%' },
-						height: { xs: '100vhw', lg: 'unset' },
+
 						top: { xs: '0', lg: 'unset' },
 						right: { xs: opened ? 0 : '-100%', lg: 'unset' },
 						zIndex: 2,
