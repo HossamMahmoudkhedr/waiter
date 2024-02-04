@@ -13,7 +13,7 @@ const StyledLI = styled.li`
 
 	@media (max-width: 1024px) {
 		& a {
-			font-size: 1.5rem;
+			font-size: 1rem;
 			color: var(--dark-gray);
 		}
 		& {
@@ -69,8 +69,8 @@ const Navbar = () => {
 						padding: { xs: '3rem 1rem', lg: 'unset' },
 						backgroundColor: { xs: 'white', lg: 'unset' },
 						width: { xs: '100%', lg: '76%' },
-
 						top: { xs: '0', lg: 'unset' },
+						height: { xs: '100vh', lg: 'unset' },
 						right: { xs: opened ? 0 : '-100%', lg: 'unset' },
 						zIndex: 2,
 						gap: { xs: '2rem', lg: 'unset' },
