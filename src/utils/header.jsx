@@ -17,7 +17,7 @@ const Header = ({ text, title, left, right, align, fs, lh }) => {
 					sx={{
 						display: { xs: 'none', md: 'block' },
 						position: 'absolute',
-						right: { md: '-255px', lg: '-145px', xl: '-65px' },
+						right: { md: '-255px', lg: '-145px', xl: '-38px' },
 						top: { md: '-42px', lg: '10px' },
 					}}>
 					{icons.dottedLine}
@@ -41,7 +41,7 @@ const Header = ({ text, title, left, right, align, fs, lh }) => {
 					sx={{
 						display: { xs: 'none', md: 'block' },
 						position: 'absolute',
-						left: { md: '-282px', lg: '-167px', xl: '-87px' },
+						left: { md: '-282px', lg: '-167px', xl: '-45px' },
 						top: { md: '-128px', lg: '-146px' },
 						transform: {
 							md: 'rotateY(180deg) rotateZ(-24deg) scale(0.84)',

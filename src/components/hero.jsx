@@ -29,17 +29,17 @@ const Hero = () => {
 						sx={{
 							display: { xs: 'none', md: 'block' },
 							position: 'absolute',
-							right: { md: '-33px', lg: '-60px' },
-							top: { md: '-64px', lg: '-60px' },
+							right: { md: '-33px', lg: '-28px' },
+							top: { md: '-64px', lg: '-63px' },
 						}}>
 						{icons.star}
 					</Box>
 					<Typography
 						variant="h1"
 						sx={{
-							fontSize: { xs: '2rem', md: '3rem', lg: '3.5rem' },
-							fontWeight: '500',
-							lineHeight: { xs: '40px', md: '70px', lg: '72px' },
+							fontSize: { xs: '2rem', md: '3.5rem', lg: '4rem' },
+							fontWeight: '600',
+							lineHeight: { xs: '40px', md: '70px', lg: 'normal' },
 						}}>
 						أيًا كان نشاطك، مطعم ، كوفي ، سوبر ماركت تطبيقك جاهز خلال 48 ساعة !
 					</Typography>
@@ -48,8 +48,8 @@ const Hero = () => {
 						sx={{
 							display: { xs: 'none', md: 'block' },
 							position: 'absolute',
-							left: { md: '145px', lg: '208px' },
-							bottom: '-48px',
+							left: { md: '145px', lg: '210px' },
+							bottom: { md: '-60px', lg: '-50px' },
 							transform: 'scale(0.96)',
 						}}>
 						{icons.star}
@@ -58,8 +58,8 @@ const Hero = () => {
 						sx={{
 							display: { xs: 'none', md: 'block' },
 							position: 'absolute',
-							right: { md: '13px', lg: '-132px' },
-							bottom: { md: '3px', lg: '34px' },
+							right: { md: '10px', lg: '-100px' },
+							bottom: { md: '3px', lg: '60px' },
 						}}>
 						<Box
 							component="span"
@@ -76,8 +76,8 @@ const Hero = () => {
 						sx={{
 							display: { xs: 'none', md: 'block' },
 							position: 'absolute',
-							left: { md: '-10px', lg: '-80px' },
-							top: { md: '-40px', lg: '-14px' },
+							left: { md: '-10px', lg: '-60px' },
+							top: { md: '-40px', lg: '-20px' },
 						}}>
 						<Box
 							component="span"
@@ -121,8 +121,8 @@ const Hero = () => {
 						sx={{
 							display: { xs: 'none', md: 'block' },
 							position: 'absolute',
-							right: '-64%',
-							bottom: '-160%',
+							right: '-71%',
+							bottom: '-171%',
 						}}>
 						{icons.dotted}
 					</Box>

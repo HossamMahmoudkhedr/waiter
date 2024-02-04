@@ -7,13 +7,13 @@ import { icons } from '../utils/icons';
 
 const StyledLI = styled.li`
 	& a {
-		font-size: 12px;
+		font-size: 14px;
+		font-weight: 500;
 	}
 
 	@media (max-width: 1024px) {
 		& a {
 			font-size: 1.5rem;
-			font-weight: 500;
 			color: var(--dark-gray);
 		}
 		& {
@@ -41,16 +41,14 @@ const Navbar = () => {
 				sx={{
 					justifyContent: 'space-between',
 					alignItems: 'center',
-					padding: { xs: '1rem 0.5rem', lg: '1rem 0rem' },
-					height: { xs: opened ? '148px' : 'auto', lg: 'auto' },
+					padding: { xs: '1rem 0.5rem', lg: '0.5rem 0rem' },
 				}}>
 				<Box
 					sx={{
 						padding: '29px 3px',
 						right: { xs: '1.35rem', lg: 'unset' },
 						top: { xs: '1rem', lg: 'unset' },
-						position: opened ? 'fixed' : 'unset',
-						zIndex: { xs: '9', lg: 'unset' },
+
 						width: '112px',
 					}}>
 					<Link
@@ -77,14 +75,46 @@ const Navbar = () => {
 						zIndex: 2,
 						gap: { xs: '2rem', lg: 'unset' },
 						transition: { xs: 'all 0.3s ease-in', lg: 'unset' },
+						overflowY: 'scroll',
 					}}>
+					<Stack
+						direction="row"
+						justifyContent="space-between"
+						sx={{ display: { xs: 'flex', lg: 'none' } }}>
+						<Box sx={{ width: '112px' }}>
+							<Link
+								to={'/'}
+								style={{ width: '100%' }}>
+								<img
+									width={'100%'}
+									src={require('../assets/images/logo11.png')}
+									alt="WAITER"
+								/>
+							</Link>
+						</Box>
+						<Stack
+							onClick={handleMenu}
+							sx={{
+								display: 'flex',
+								width: '48px',
+								height: '48px',
+								borderRadius: '50%',
+								background: 'var(--light-gray)',
+								border: '1px solid var(--very-light-gray)',
+								justifyContent: 'center',
+								alignItems: 'center',
+								cursor: 'pointer',
+							}}>
+							{icons.close}
+						</Stack>
+					</Stack>
 					<Stack
 						component="ul"
 						direction={{ xs: 'column', lg: 'row' }}
 						sx={{
 							backgroundColor: { xs: 'unset', lg: 'var(--light-gray)' },
 							gap: { xs: 'unset', lg: '2rem' },
-							padding: '1.25rem 1.5rem',
+							padding: '1rem 1.5rem',
 							borderRadius: { xs: 'unset', lg: '5rem' },
 							border: { xs: 'unset', lg: '1px solid white' },
 						}}>
@@ -146,17 +176,15 @@ const Navbar = () => {
 						height: '48px',
 						borderRadius: '50%',
 						background: 'var(--light-gray)',
-						border: `1px solid ${opened ? 'var(--very-light-gray)' : 'white'}`,
+						border: '1px solid white',
 						justifyContent: 'center',
 						alignItems: 'center',
 						cursor: 'pointer',
-						zIndex: 9,
+
 						left: { xs: '1.2rem', lg: 'unset' },
 						top: { xs: '3rem', lg: 'unset' },
-						position: opened ? 'fixed' : 'unset',
 					}}>
-					{!opened && icons.menu}
-					{opened && icons.close}
+					{icons.menu}
 				</Stack>
 			</Stack>
 		</Box>
