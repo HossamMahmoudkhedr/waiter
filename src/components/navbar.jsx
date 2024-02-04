@@ -28,7 +28,7 @@ const StyledLI = styled.li`
 const Navbar = () => {
 	const [opened, setOpened] = useState(false);
 	const handleMenu = () => {
-		setOpened(!opened);
+		setOpened(true);
 	};
 	const handleNavClick = () => {
 		setOpened(false);
@@ -66,10 +66,10 @@ const Navbar = () => {
 					sx={{
 						position: { xs: 'fixed', lg: 'unset' },
 						justifyContent: { xs: 'center', lg: 'space-between' },
-						padding: { xs: '0 1rem', lg: 'unset' },
+						padding: { xs: '3rem 1rem', lg: 'unset' },
 						backgroundColor: { xs: 'white', lg: 'unset' },
 						width: { xs: '100%', lg: '76%' },
-						height: { xs: '100vh', lg: 'unset' },
+						height: { xs: '100vhw', lg: 'unset' },
 						top: { xs: '0', lg: 'unset' },
 						right: { xs: opened ? 0 : '-100%', lg: 'unset' },
 						zIndex: 2,
@@ -93,7 +93,7 @@ const Navbar = () => {
 							</Link>
 						</Box>
 						<Stack
-							onClick={handleMenu}
+							onClick={handleNavClick}
 							sx={{
 								display: 'flex',
 								width: '48px',
