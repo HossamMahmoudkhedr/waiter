@@ -4,6 +4,7 @@ import Header from '../utils/header';
 import { packages } from '../data/packagesData';
 import CustomButton from '../utils/customButton';
 import { icons } from '../utils/icons';
+import { motion } from 'framer-motion';
 
 const Packages = () => {
 	const [switchPos, setSwitchPos] = useState('translateX(-95%)');
@@ -31,7 +32,7 @@ const Packages = () => {
 			<Stack sx={{ alignItems: 'center', marginBottom: '4rem' }}>
 				<Stack
 					direction="row"
-					sx={{ gap: '0.75rem', alignItems: 'center' }}>
+					sx={{ gap: '0.75rem', alignItems: 'center', color: 'var(--black)' }}>
 					<Typography
 						variant="body1"
 						fontSize="0.875rem">
@@ -81,6 +82,14 @@ const Packages = () => {
 						order={{ xs: i === 1 ? 1 : 2, lg: i + 1 }}
 						key={pack.id}>
 						<Box
+							component={motion.div}
+							initial={{ transform: 'translateY(50%)', opacity: 0 }}
+							whileInView={{
+								transform: `translateY(${pack.special ? '-3rem' : '0%'})`,
+								opacity: 1,
+							}}
+							transition={{ duration: 2, type: 'spring' }}
+							viewport={{ once: true }}
 							sx={{
 								borderRadius: '2rem',
 								border: `2px solid ${

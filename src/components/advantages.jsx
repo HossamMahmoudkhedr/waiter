@@ -27,7 +27,7 @@ const Advantages = () => {
 						container
 						justifyContent="center"
 						spacing={2}>
-						{advantages.map((advantage) => (
+						{advantages.map((advantage, i) => (
 							<Grid
 								item
 								key={advantage.id}
@@ -38,6 +38,7 @@ const Advantages = () => {
 									title={advantage.title}
 									content={advantage.content}
 									icon={advantage.icon}
+									index={i}
 								/>
 							</Grid>
 						))}

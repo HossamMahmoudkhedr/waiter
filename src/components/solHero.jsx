@@ -1,13 +1,18 @@
 import { Box, Stack } from '@mui/material';
-import React from 'react';
+import React, { useContext } from 'react';
 import TextContainer from '../utils/textContainer';
+import { ThemeContext } from '../pages/rootLayout';
+import { motion } from 'framer-motion';
 
 const SolHero = () => {
+	const themeContext = useContext(ThemeContext);
 	return (
 		<Box
 			sx={{
-				padding: '3.5rem 0 0 0',
-				backgroundImage: `url(${require(`../assets/images/Waves2.png`)})`,
+				padding: '2.5rem 0 0 0',
+				backgroundImage: `url(${require(`../assets/images/Waves2${
+					themeContext === 'dark' ? '-dark' : ''
+				}.png`)})`,
 				backgroundRepeat: 'no-repeat',
 				backgroundSize: 'cover',
 				backgroundPosition: { xs: '65% 0px', md: 'right', lg: 'center' },
@@ -32,11 +37,21 @@ const SolHero = () => {
 						lh={'56px'}
 					/>
 				</Box>
-				<Stack>
-					<Box sx={{ display: { xs: 'none', lg: 'block' }, width: '650px' }}>
+				<Stack sx={{ overflow: 'hidden', paddingTop: '1rem' }}>
+					<Box
+						component={motion.div}
+						initial={{ transform: 'translateY(100%)' }}
+						whileInView={{
+							transform: 'translateY(0%)',
+						}}
+						transition={{ duration: 1, type: 'spring' }}
+						viewport={{ once: true }}
+						sx={{ display: { xs: 'none', lg: 'block' }, width: '650px' }}>
 						<img
 							style={{ width: '100%' }}
-							src={require(`../assets/images/half-phone-lg.png`)}
+							src={require(`../assets/images/half-phone-lg${
+								themeContext === 'dark' ? '-dark' : ''
+							}.png`)}
 							alt=""
 							loading="lazy"
 						/>

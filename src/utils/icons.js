@@ -17,6 +17,8 @@ import { ReactComponent as Minus } from '../assets/icons/minus.svg';
 import { ReactComponent as Menu } from '../assets/icons/menu.svg';
 import { ReactComponent as Close } from '../assets/icons/close.svg';
 import { ReactComponent as ArrowUp } from '../assets/icons/arrow-up.svg';
+import { ReactComponent as Sun } from '../assets/icons/sun.svg';
+import { ReactComponent as Moon } from '../assets/icons/moon.svg';
 
 export const icons = {
 	star: <Star />,
@@ -38,4 +40,6 @@ export const icons = {
 	menu: <Menu />,
 	close: <Close />,
 	up: <ArrowUp />,
+	sun: <Sun />,
+	moon: <Moon />,
 };

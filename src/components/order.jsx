@@ -1,16 +1,18 @@
 import { Box } from '@mui/material';
-import React from 'react';
+import React, { useContext } from 'react';
 import SolContent from '../utils/solContent';
 import CustomButton from '../utils/customButton';
 import Questions from './questions';
+import { ThemeContext } from '../pages/rootLayout';
 
 const Order = () => {
+	const themeContext = useContext(ThemeContext);
 	return (
 		<Box>
 			<SolContent
 				lgdir="row-reverse"
 				align="start"
-				img="tablet-lg.png"
+				img={`tablet-lg${themeContext === 'dark' ? '-dark' : ''}.png`}
 				head="نظام متكامل لنقاط البيع و إدارة المطاعم."
 				text="نظـام نقـاط البيع وإدارة المطاعم نظّم أقسام مطعمك الأماميّة، عمليّات المطبخ، والعمليّات الخلفية بسهولة ودقّة ومرونة."
 				title="طريقة الطلب"

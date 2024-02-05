@@ -9,6 +9,7 @@ const StyledLI = styled.li`
 	& a {
 		font-size: 14px;
 		font-weight: 500;
+		color: var(--dark-gray);
 	}
 
 	@media (max-width: 1024px) {
@@ -67,7 +68,7 @@ const Navbar = () => {
 						position: { xs: 'fixed', lg: 'unset' },
 						justifyContent: { xs: 'center', lg: 'space-between' },
 						padding: { xs: '3rem 1rem', lg: 'unset' },
-						backgroundColor: { xs: 'white', lg: 'unset' },
+						backgroundColor: { xs: 'var(--bg-color)', lg: 'unset' },
 						width: { xs: '100%', lg: '76%' },
 						top: { xs: '0', lg: 'unset' },
 						height: { xs: '100vh', lg: 'unset' },
@@ -103,6 +104,7 @@ const Navbar = () => {
 								border: '1px solid var(--very-light-gray)',
 								justifyContent: 'center',
 								alignItems: 'center',
+								stroke: 'var(--icon-gray)',
 								cursor: 'pointer',
 							}}>
 							{icons.close}
@@ -116,7 +118,7 @@ const Navbar = () => {
 							gap: { xs: 'unset', lg: '2rem' },
 							padding: '1rem 1.5rem',
 							borderRadius: { xs: 'unset', lg: '5rem' },
-							border: { xs: 'unset', lg: '1px solid white' },
+							border: { xs: 'unset', lg: '1px solid var(--border-color)' },
 						}}>
 						<StyledLI>
 							<NavLink
@@ -180,7 +182,7 @@ const Navbar = () => {
 						justifyContent: 'center',
 						alignItems: 'center',
 						cursor: 'pointer',
-
+						stroke: 'var(--icon-gray)',
 						left: { xs: '1.2rem', lg: 'unset' },
 						top: { xs: '3rem', lg: 'unset' },
 					}}>

@@ -4,6 +4,7 @@ import Heading from '../utils/heading';
 import { questions } from '../data/questionsData';
 import Question from '../utils/question';
 import { icons } from '../utils/icons';
+import { motion } from 'framer-motion';
 
 const Questions = () => {
 	const [isOpened, setIsOpened] = useState(Array(questions.length).fill(false));
@@ -52,6 +53,18 @@ const Questions = () => {
 				<Stack>
 					{questions.map((question, i) => (
 						<Box
+							component={motion.div}
+							initial={{ transform: 'translateY(50%)', opacity: 0 }}
+							whileInView={{
+								transform: 'translateY(0%)',
+								opacity: 1,
+							}}
+							transition={{
+								duration: 1,
+								delay: i > 0 ? i - 0.5 : 0,
+								type: 'spring',
+							}}
+							viewport={{ once: true }}
 							key={question.id}
 							onClick={() => toggleQuestion(i)}
 							sx={{

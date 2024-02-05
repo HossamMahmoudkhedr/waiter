@@ -1,8 +1,9 @@
 import { Box, Stack, Typography } from '@mui/material';
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import ThemeToggler from '../utils/themeToggler';
 
-const Footer = () => {
+const Footer = ({ setTheme }) => {
 	return (
 		<Stack
 			component="footer"
@@ -23,16 +24,16 @@ const Footer = () => {
 					<NavLink>تواصل معنا</NavLink>
 				</li>
 				<li>
-					<NavLink to="/order">طريقة الطلب</NavLink>
+					<a href="/order">طريقة الطلب</a>
 				</li>
 				<li>
-					<a href="#prices">الأسعار</a>
+					<a href="/">الأسعار</a>
 				</li>
 				<li>
-					<NavLink to="/solutions">الحلول</NavLink>
+					<a href="/solutions">الحلول</a>
 				</li>
 				<li>
-					<NavLink to="/">الرئيسية</NavLink>
+					<a href="/">الرئيسية</a>
 				</li>
 			</Stack>
 
@@ -43,7 +44,7 @@ const Footer = () => {
 					height: '1px',
 					width: '100%',
 				}}></Box>
-
+			<ThemeToggler setTheme={setTheme} />
 			<Typography
 				variant="body1"
 				sx={{ fontWeight: '500', color: 'var(--gray)' }}>

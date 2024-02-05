@@ -1,10 +1,13 @@
 import { Box, Stack, Typography } from '@mui/material';
-import React from 'react';
+import React, { useContext } from 'react';
 import CustomButton from '../utils/customButton';
 import { icons } from '../utils/icons';
 import Comment from '../utils/comment';
+import { ThemeContext } from '../pages/rootLayout';
+import { motion } from 'framer-motion';
 
 const Hero = () => {
+	const themeContext = useContext(ThemeContext);
 	return (
 		<Stack
 			sx={{
@@ -18,6 +21,8 @@ const Hero = () => {
 					textAlign: 'center',
 					gap: '2rem',
 					marginTop: '4rem',
+					marginBottom: '5rem',
+					color: 'var(--black)',
 				}}>
 				<Box
 					sx={{
@@ -25,7 +30,11 @@ const Hero = () => {
 						position: 'relative',
 					}}>
 					<Box
-						component="span"
+						component={motion.span}
+						initial={{ transform: 'scale(0)' }}
+						whileInView={{ transform: 'scale(1)' }}
+						transition={{ duration: 1, type: 'spring' }}
+						viewport={{ once: true }}
 						sx={{
 							display: { xs: 'none', md: 'block' },
 							position: 'absolute',
@@ -44,7 +53,11 @@ const Hero = () => {
 						أيًا كان نشاطك، مطعم ، كوفي ، سوبر ماركت تطبيقك جاهز خلال 48 ساعة !
 					</Typography>
 					<Box
-						component="span"
+						component={motion.span}
+						initial={{ transform: 'scale(0)' }}
+						whileInView={{ transform: 'scale(1)' }}
+						transition={{ duration: 1, type: 'spring' }}
+						viewport={{ once: true }}
 						sx={{
 							display: { xs: 'none', md: 'block' },
 							position: 'absolute',
@@ -55,6 +68,11 @@ const Hero = () => {
 						{icons.star}
 					</Box>
 					<Box
+						component={motion.div}
+						initial={{ transform: 'translateX(100%)' }}
+						whileInView={{ transform: 'translateX(0%)' }}
+						transition={{ duration: 1.5, type: 'spring' }}
+						viewport={{ once: true }}
 						sx={{
 							display: { xs: 'none', md: 'block' },
 							position: 'absolute',
@@ -73,6 +91,11 @@ const Hero = () => {
 						/>
 					</Box>
 					<Box
+						component={motion.div}
+						initial={{ transform: 'translateX(-100%)' }}
+						whileInView={{ transform: 'translateX(0%)' }}
+						transition={{ duration: 1.5, type: 'spring' }}
+						viewport={{ once: true }}
 						sx={{
 							display: { xs: 'none', md: 'block' },
 							position: 'absolute',
@@ -112,7 +135,7 @@ const Hero = () => {
 					/>
 					<CustomButton
 						text="قم بعمل حساب جديد"
-						textcolor="black"
+						textcolor="var(--dark-gray)"
 						bgcolor="transparent"
 						paddingsize="0.89rem 1.25rem"
 					/>
@@ -135,21 +158,43 @@ const Hero = () => {
 					overflow: 'hidden',
 				}}>
 				<Box
+					component={motion.div}
+					whileInView={{ width: '0%' }}
+					transition={{ duration: 2 }}
+					viewport={{ once: true }}
+					sx={{
+						width: '100%',
+						height: '100%',
+						backgroundColor: 'var(--bg-color)',
+						position: 'absolute',
+						left: '0',
+						top: '0',
+						zIndex: '1',
+					}}></Box>
+				<Box
+					component={motion.div}
+					initial={{ opacity: 0 }}
+					whileInView={{ opacity: 1 }}
+					transition={{ duration: 1, delay: 2 }}
+					viewport={{ once: true }}
 					sx={{
 						position: 'absolute',
 						left: '50%',
 						top: '50%',
 						transform: 'translate(-52%,-50%)',
 						backgroundImage: {
-							xs: `url(${require('../assets/images/phone-image3.png')})`,
+							xs: `url(${require(`../assets/images/phone-image3.png`)})`,
 							md: `url(${require('../assets/images/phone-image2.png')})`,
-							lg: `url(${require('../assets/images/phone-image.png')})`,
+							lg: `url(${require(`../assets/images/phone-image${
+								themeContext === 'dark' ? '-dark' : ''
+							}.png`)})`,
 						},
 						backgroundRepeat: 'no-repeat',
 						backgroundSize: 'contain',
 						backgroundPosition: 'center',
 						width: '100%',
 						height: '100%',
+						zIndex: '2',
 					}}></Box>
 				{/* <Box
 					sx={{
@@ -168,7 +213,9 @@ const Hero = () => {
 					sx={{
 						width: '100%',
 						height: '100%',
-						backgroundImage: `url(${require('../assets/images/waves.png')})`,
+						backgroundImage: `url(${require(`../assets/images/waves${
+							themeContext === 'dark' ? '-dark' : ''
+						}.png`)})`,
 						backgroundRepeat: 'no-repeat',
 						backgroundSize: { xs: 'cover', lg: 'contain' },
 						backgroundPosition: { xs: 'unset', lg: 'center' },

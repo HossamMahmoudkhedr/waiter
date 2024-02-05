@@ -1,6 +1,7 @@
 import { Box, Stack } from '@mui/material';
 import React from 'react';
 import TextContainer from './textContainer';
+import { motion } from 'framer-motion';
 
 const SolContent = ({
 	title,
@@ -20,6 +21,14 @@ const SolContent = ({
 }) => {
 	return (
 		<Box
+			component={motion.div}
+			initial={{ transform: 'translateY(50%)', opacity: 0 }}
+			whileInView={{
+				transform: 'translateY(0%)',
+				opacity: 1,
+			}}
+			transition={{ duration: 1.5, type: 'spring' }}
+			viewport={{ once: true }}
 			sx={{
 				padding: { xs: '4rem 0', md: '4rem 3rem', lg: padding },
 				backgroundImage: bg

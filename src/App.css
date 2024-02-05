@@ -46,6 +46,10 @@
 		background-size: contain !important;
 	}
 } */
+.App {
+	/* position: relative; */
+	background: var(--bg-color);
+}
 @media (max-width: 768px) {
 	div.open {
 		height: 300px;

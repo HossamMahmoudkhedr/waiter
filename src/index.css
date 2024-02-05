@@ -1,14 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&display=swap');
 :root {
+	--border-color: #ffffff;
 	--very-light-gray: #98a2b3;
 	--light-gray: #ffffff80;
+	--icon-gray: #475467;
 	--gray: #475467;
 	--dark-gray: #1d2939;
 	--blue: #007aff;
 	--green: #cff85b;
 	--purple: #9747ff;
 	--black: #000000;
+	--bg-color: #ffff;
+}
+
+[data-theme='dark'] {
+	--border-color: #616161;
+	--very-light-gray: #98a2b3;
+	--light-gray: #00000060;
+	--icon-gray: #ffffff;
+	--gray: #ffffff80;
+	--dark-gray: #ffff;
+	--blue: #007aff;
+	--green: #cff85b;
+	--purple: #9747ff;
+	--black: #ffff;
+	--bg-color: black;
 }
 
 * {
@@ -29,7 +46,7 @@ ul li {
 
 a {
 	text-decoration: none;
-	color: black;
+	color: var(--black);
 }
 
 ul li a {

@@ -33,6 +33,7 @@ const Heading = ({ text, left, right, fs, lh }) => {
 						},
 						fontWeight: '500',
 						lineHeight: { xs: '42px', md: lh || '42px', lg: '56px' },
+						color: 'var(--black)',
 					}}>
 					{text}
 				</Typography>

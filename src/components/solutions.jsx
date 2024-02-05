@@ -1,10 +1,12 @@
 import { Box } from '@mui/material';
-import React from 'react';
+import React, { useContext } from 'react';
 import Questions from './questions';
 import SolContent from '../utils/solContent';
 import SolHero from './solHero';
+import { ThemeContext } from '../pages/rootLayout';
 
 const Solutions = () => {
+	const themeContext = useContext(ThemeContext);
 	return (
 		<Box>
 			<SolHero />
@@ -13,7 +15,7 @@ const Solutions = () => {
 				lgdir="row-reverse"
 				head="كاشير واجهزة نقاط بيع، فواتير لانهائيه."
 				title="الحلول"
-				img="tablet-lg.png"
+				img={`tablet-lg${themeContext === 'dark' ? '-dark' : ''}.png`}
 				padding="3.5rem 0 0 0"
 				text="وفّر لعملائك تجربة تسوق مميزة تناسب نشاطك التجاري، سواء كان مطعمًا أو مقهى أو متجرًا إلكترونيًا. وذلك من خلال مزايا عديدة مثل، قوائم طعام تفاعلية، تحديد موقع العملاء بدقة عالية، والدفع السريع، ولوحة تحكم متكاملة لتصميم واجهات تطبيقك، وأكثر."
 				width="55%"
@@ -23,7 +25,7 @@ const Solutions = () => {
 				align="center"
 				lgdir="column"
 				head="ربط الكاشير مع التطبيق لاحصائيات واحده"
-				img="wide-tablet-lg.png"
+				img={`wide-tablet-lg${themeContext === 'dark' ? '-dark' : ''}.png`}
 				padding="8rem 18rem "
 				text="وفّر لعملائك تجربة تسوق مميزة تناسب نشاطك التجاري، سواء كان مطعمًا أو مقهى أو متجرًا إلكترونيًا. وذلك من خلال مزايا عديدة مثل، قوائم طعام تفاعلية، تحديد موقع العملاء بدقة عالية، والدفع السريع، ولوحة تحكم متكاملة لتصميم واجهات تطبيقك، وأكثر."
 				width="65%"
