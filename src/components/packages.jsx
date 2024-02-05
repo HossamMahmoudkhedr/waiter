@@ -88,7 +88,7 @@ const Packages = () => {
 								transform: `translateY(${pack.special ? '-3rem' : '0%'})`,
 								opacity: 1,
 							}}
-							transition={{ duration: 2, type: 'spring' }}
+							transition={{ duration: 1, type: 'spring' }}
 							viewport={{ once: true }}
 							sx={{
 								borderRadius: '2rem',

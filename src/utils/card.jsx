@@ -11,8 +11,8 @@ const Card = ({ icon, title, content, index }) => {
 				transform: 'scale(1)',
 			}}
 			transition={{
-				duration: 1,
-				delay: (Math.random() * 5) / 4,
+				duration: 0.5,
+				delay: (Math.random() * 5) / 7,
 				type: 'spring',
 				stiffness: 100,
 			}}
