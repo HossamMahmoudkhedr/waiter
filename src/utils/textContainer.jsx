@@ -1,7 +1,6 @@
 import { Box, Stack, Typography } from '@mui/material';
 import React from 'react';
 import Header from './header';
-import CustomButton from './customButton';
 
 const TextContainer = ({ title, head, align, text, button, fs, lh }) => {
 	return (

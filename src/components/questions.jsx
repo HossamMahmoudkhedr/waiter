@@ -61,7 +61,7 @@ const Questions = () => {
 							}}
 							transition={{
 								duration: 1,
-								delay: i > 0 ? i - 0.5 : 0,
+								delay: i / 2,
 								type: 'spring',
 							}}
 							viewport={{ once: true }}

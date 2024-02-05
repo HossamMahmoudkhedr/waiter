@@ -1,4 +1,5 @@
 import { Box } from '@mui/material';
+import { motion } from 'framer-motion';
 import React from 'react';
 import styled from 'styled-components';
 
@@ -56,7 +57,13 @@ const StyledBlueCircle = styled.div`
 const Gradient = ({ gtop, gleft, ytop, yright, opacity }) => {
 	return (
 		<StyledMain>
-			<Box sx={{ opacity: opacity || 0.7 }}>
+			<Box
+				component={motion.div}
+				initial={{ opacity: 0 }}
+				whileInView={{ opacity: 0.7 }}
+				transition={{ duration: 1.5 }}
+				viewport={{ once: true }}
+				sx={{ opacity: opacity || 0.7 }}>
 				<StyledGreenCircle
 					gtop={gtop}
 					gleft={gleft}></StyledGreenCircle>

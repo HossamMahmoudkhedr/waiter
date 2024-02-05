@@ -14,6 +14,7 @@ const Card = ({ icon, title, content, index }) => {
 				duration: 1,
 				delay: (Math.random() * 5) / 4,
 				type: 'spring',
+				stiffness: 100,
 			}}
 			viewport={{ once: true }}
 			direction="row"

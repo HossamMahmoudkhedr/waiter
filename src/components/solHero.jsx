@@ -53,7 +53,6 @@ const SolHero = () => {
 								themeContext === 'dark' ? '-dark' : ''
 							}.png`)}
 							alt=""
-							loading="lazy"
 						/>
 					</Box>
 					<Box
