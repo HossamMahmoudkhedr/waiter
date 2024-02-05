@@ -51,6 +51,8 @@ const Navbar = () => {
 						top: { xs: '1rem', lg: 'unset' },
 
 						width: '112px',
+						position: 'relative',
+						zIndex: '1',
 					}}>
 					<Link
 						to={'/'}
